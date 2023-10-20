@@ -1,0 +1,823 @@
+{
+  "last_node_id": 20,
+  "last_link_id": 24,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1374,
+        271
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7,
+          "label": "Latent"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8,
+          "label": "VAE"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ],
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        1714,
+        160
+      ],
+      "size": {
+        "0": 210,
+        "1": 270
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9,
+          "label": "图像"
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "PreviewTextNode",
+      "pos": [
+        -453,
+        486
+      ],
+      "size": {
+        "0": 315,
+        "1": 76
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 17,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewTextNode"
+      },
+      "widgets_values": [
+        "",
+        "A girl, realistic, physics engine, master photography, cycles physics engine"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "TranslateTextNode",
+      "pos": [
+        -1098,
+        830
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            18,
+            19
+          ],
+          "shape": 3,
+          "label": "文本",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TranslateTextNode"
+      },
+      "widgets_values": [
+        "auto",
+        "en",
+        "低质量，低分辨率，错误透视，漫画"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "PreviewTextNode",
+      "pos": [
+        -602,
+        912
+      ],
+      "size": [
+        315,
+        75.99999332427979
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 19,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewTextNode"
+      },
+      "widgets_values": [
+        "",
+        "Low quality, low resolution, wrong perspective, comics"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "PreviewTextNode",
+      "pos": [
+        -502,
+        1193
+      ],
+      "size": [
+        315,
+        76.00000095367432
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 15,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewTextNode"
+      },
+      "widgets_values": [
+        "",
+        "simplified, abstract, unrealistic, impressionistic, low resolution, Low quality, low resolution, wrong perspective, comics"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "TranslateTextNode",
+      "pos": [
+        -1174,
+        512
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            16,
+            17
+          ],
+          "shape": 3,
+          "label": "文本",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TranslateTextNode"
+      },
+      "widgets_values": [
+        "auto",
+        "en",
+        "一个女孩，写实，物理引擎，大师级摄影，cycles物理引擎"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "PreviewTextNode",
+      "pos": [
+        12,
+        839
+      ],
+      "size": [
+        315,
+        76.00000095367432
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 14,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewTextNode"
+      },
+      "widgets_values": [
+        "",
+        "hyperrealistic art A girl, realistic, physics engine, master photography, cycles physics engine . extremely high-resolution details, photographic, realism pushed to extreme, fine texture, incredibly lifelike"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        409,
+        187
+      ],
+      "size": {
+        "0": 422.84503173828125,
+        "1": 164.31304931640625
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 10,
+          "label": "CLIP"
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 23,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4
+          ],
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "EmptyLatentImage",
+      "pos": [
+        404,
+        797
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            2
+          ],
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        408,
+        489
+      ],
+      "size": {
+        "0": 425.27801513671875,
+        "1": 180.6060791015625
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5,
+          "label": "CLIP"
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 24,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            6
+          ],
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -272,
+        289
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ],
+          "slot_index": 0,
+          "label": "模型"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            5,
+            10
+          ],
+          "slot_index": 1,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8
+          ],
+          "slot_index": 2,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "majicmixRealistic_betterV2V25.safetensors"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "SDXLPromptStyler",
+      "pos": [
+        -454,
+        642
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "link": 16,
+          "widget": {
+            "name": "text_positive",
+            "config": [
+              "STRING",
+              {
+                "default": "",
+                "multiline": true
+              }
+            ]
+          },
+          "label": "正面提示词"
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "link": 18,
+          "widget": {
+            "name": "text_negative",
+            "config": [
+              "STRING",
+              {
+                "default": "",
+                "multiline": true
+              }
+            ]
+          },
+          "label": "负面提示词"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text_positive",
+          "type": "STRING",
+          "links": [
+            14,
+            23
+          ],
+          "shape": 3,
+          "label": "正面提示词",
+          "slot_index": 0
+        },
+        {
+          "name": "text_negative",
+          "type": "STRING",
+          "links": [
+            15,
+            24
+          ],
+          "shape": 3,
+          "label": "负面提示词",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLPromptStyler"
+      },
+      "widgets_values": [
+        "1girl\n",
+        "",
+        "artstyle-hyperrealism",
+        "No"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        977,
+        405
+      ],
+      "size": {
+        "0": 315,
+        "1": 474
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1,
+          "label": "模型"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 4,
+          "label": "正面提示词"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6,
+          "label": "负面提示词"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 2,
+          "label": "Latent"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        795934054726511,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "normal",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      5,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      4,
+      6,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      4,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      6,
+      7,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      4,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      14,
+      15,
+      0,
+      17,
+      0,
+      "STRING"
+    ],
+    [
+      15,
+      15,
+      1,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      12,
+      0,
+      15,
+      0,
+      "STRING"
+    ],
+    [
+      17,
+      12,
+      0,
+      14,
+      0,
+      "STRING"
+    ],
+    [
+      18,
+      19,
+      0,
+      15,
+      1,
+      "STRING"
+    ],
+    [
+      19,
+      19,
+      0,
+      20,
+      0,
+      "STRING"
+    ],
+    [
+      23,
+      15,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      24,
+      15,
+      1,
+      7,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

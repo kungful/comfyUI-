@@ -1,0 +1,1065 @@
+{
+  "last_node_id": 28,
+  "last_link_id": 34,
+  "nodes": [
+    {
+      "id": 11,
+      "type": "IPAdapterModelLoader",
+      "pos": [
+        46,
+        -266
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IPADAPTER",
+          "type": "IPADAPTER",
+          "links": [
+            10
+          ],
+          "shape": 3,
+          "label": "IPADAPTER"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterModelLoader"
+      },
+      "widgets_values": [
+        "ip-adapter_sd15.bin"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "LoadImage",
+      "pos": [
+        -395,
+        47
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ],
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "00994-2685611690-masterpiece, best quality,no humans, interior scene, couch, window, scenery, table, indoors, lamp, cup, building, cityscape, pla.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "EmptyLatentImage",
+      "pos": [
+        527,
+        678
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            2
+          ],
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "type": "IPAdapterApply",
+      "pos": [
+        542,
+        -229
+      ],
+      "size": {
+        "0": 315,
+        "1": 142
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": 10,
+          "label": "ipadapter",
+          "slot_index": 0
+        },
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 12,
+          "label": "clip_vision",
+          "slot_index": 1
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 13,
+          "label": "image",
+          "slot_index": 2
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 14,
+          "label": "model",
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "label": "MODEL",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterApply"
+      },
+      "widgets_values": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": 17,
+      "type": "M-LSDPreprocessor",
+      "pos": [
+        971,
+        -378
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 20,
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18,
+            22
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "M-LSDPreprocessor"
+      },
+      "widgets_values": [
+        0.1,
+        0.1,
+        512
+      ]
+    },
+    {
+      "id": 19,
+      "type": "LoadImage",
+      "pos": [
+        539,
+        -654
+      ],
+      "size": [
+        315,
+        313.99998474121094
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "label": "图像",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "00994-2685611690-masterpiece, best quality,no humans, interior scene, couch, window, scenery, table, indoors, lamp, cup, building, cityscape, pla.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "PreviewImage",
+      "pos": [
+        1540,
+        -598
+      ],
+      "size": [
+        210,
+        246
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 22,
+          "label": "图像",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 16,
+      "type": "ControlNetApply",
+      "pos": [
+        1383,
+        -179
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 98
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 16,
+          "label": "条件",
+          "slot_index": 0
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 19,
+          "label": "ControlNet",
+          "slot_index": 1
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 18,
+          "label": "图像"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            17
+          ],
+          "shape": 3,
+          "label": "条件",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApply"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        2490,
+        -100
+      ],
+      "size": [
+        210,
+        270
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9,
+          "label": "图像"
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        2086,
+        -94
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7,
+          "label": "Latent"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8,
+          "label": "VAE"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            9
+          ],
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        506,
+        431
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5,
+          "label": "CLIP"
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 33,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "文本",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            6
+          ],
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 26,
+      "type": "PreviewTextNode",
+      "pos": [
+        1292.838322265624,
+        837.7818247985833
+      ],
+      "size": [
+        315,
+        75.99997425079346
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 34,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewTextNode"
+      },
+      "widgets_values": [
+        "",
+        "2d, comics, painting, low resolution, low quality"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        1410,
+        189
+      ],
+      "size": [
+        315,
+        474
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 15,
+          "label": "模型"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 17,
+          "label": "正面提示词"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6,
+          "label": "负面提示词"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 2,
+          "label": "Latent"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        215545373901289,
+        "randomize",
+        30,
+        8,
+        "euler",
+        "normal",
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        -67,
+        -83
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "label": "CLIP视觉"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionLoader"
+      },
+      "widgets_values": [
+        "SD1.5\\pytorch_model.bin"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -358,
+        474
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            14
+          ],
+          "slot_index": 0,
+          "label": "模型"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            5,
+            29
+          ],
+          "slot_index": 1,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8
+          ],
+          "slot_index": 2,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "majicmixRealistic_betterV2V25.safetensors"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "PreviewTextNode",
+      "pos": [
+        352,
+        814
+      ],
+      "size": [
+        315,
+        76.00000190734863
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 32,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "forceInput": true
+              }
+            ]
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewTextNode"
+      },
+      "widgets_values": [
+        "",
+        "Masterful photography, interior design, cycles physics engine, realistic, detailed details"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        606,
+        188
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 29,
+          "label": "CLIP"
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 31,
+          "widget": {
+            "name": "text",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "文本",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            16
+          ],
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 27,
+      "type": "DeepTranslatorTextNode",
+      "pos": [
+        23,
+        765
+      ],
+      "size": [
+        210,
+        250
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            31,
+            32
+          ],
+          "shape": 3,
+          "label": "文本",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DeepTranslatorTextNode"
+      },
+      "widgets_values": [
+        "auto",
+        "english",
+        "disable",
+        "",
+        "",
+        "GoogleTranslator",
+        "大师级摄影，室内设计，cycles物理引擎，逼真，详细的细节",
+        "proxy_hide",
+        "authorization_hide"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "DeepTranslatorTextNode",
+      "pos": [
+        864,
+        846
+      ],
+      "size": [
+        210,
+        319.9999694824219
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            33,
+            34
+          ],
+          "shape": 3,
+          "label": "文本",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DeepTranslatorTextNode"
+      },
+      "widgets_values": [
+        "auto",
+        "english",
+        "disable",
+        "",
+        "",
+        "GoogleTranslator",
+        "2d，漫画，绘画，低分辨率，低质量",
+        "proxy_hide",
+        "authorization_hide"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "ControlNetLoader",
+      "pos": [
+        1029,
+        -211
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "label": "ControlNet"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "control_v11p_sd15_mlsd.pth"
+      ]
+    }
+  ],
+  "links": [
+    [
+      2,
+      5,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      5,
+      4,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      6,
+      7,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      11,
+      0,
+      10,
+      0,
+      "IPADAPTER"
+    ],
+    [
+      12,
+      13,
+      0,
+      10,
+      1,
+      "CLIP_VISION"
+    ],
+    [
+      13,
+      14,
+      0,
+      10,
+      2,
+      "IMAGE"
+    ],
+    [
+      14,
+      4,
+      0,
+      10,
+      3,
+      "MODEL"
+    ],
+    [
+      15,
+      10,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      16,
+      6,
+      0,
+      16,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      16,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      17,
+      0,
+      16,
+      2,
+      "IMAGE"
+    ],
+    [
+      19,
+      18,
+      0,
+      16,
+      1,
+      "CONTROL_NET"
+    ],
+    [
+      20,
+      19,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      17,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      4,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      31,
+      27,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      32,
+      27,
+      0,
+      24,
+      0,
+      "STRING"
+    ],
+    [
+      33,
+      28,
+      0,
+      7,
+      1,
+      "STRING"
+    ],
+    [
+      34,
+      28,
+      0,
+      26,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
