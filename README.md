@@ -1,4 +1,4 @@
-如果遇到缺失节点，请到comfyUI manager安装(https://github.com/ltdrdata/ComfyUI-Manager.git)；
+如果遇到缺失节点，请到comfyUI manager安装: https://github.com/ltdrdata/ComfyUI-Manager.git
 有些全新节点或者是节点作者维护移交给其它开发者都可能缺失或者报错，
 这时候需要通过manager导航节点项目地址看文档，进行手动安装依赖或者卸载重装，
 依赖文件requirements.txt请使用comfyUI的嵌入式python或者虚拟环境python进行安装。
