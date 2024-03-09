@@ -4,5 +4,5 @@
 依赖文件requirements.txt请使用comfyUI的嵌入式python或者虚拟环境python进行安装。
 
 推荐另外一些必备实用节点：
-comfyui-workspace-manager管理工作流：https://github.com/11cafe/comfyui-workspace-manager.git；
+comfyui-workspace-manager管理工作流：https://github.com/11cafe/comfyui-workspace-manager.git
 comfyui-browser浏览你生成的图像：https://github.com/talesofai/comfyui-browser.git
