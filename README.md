@@ -18,3 +18,9 @@
 - [comfyui-tooling-nodes安装在comfyUI,为了和krita插件进行通讯](https://github.com/Acly/comfyui-tooling-nodes.git)
 - [krita-ai-tools在krita的智能选区插件](https://github.com/Acly/krita-ai-tools.git)
 - [BlenderLayer将blender的图像传递到krita的三维](https://github.com/Yuntokon/BlenderLayer.git)
+
+
+
+# <big>A1111-webUI必备插件</big>
+- [stable-diffusion-webui-localization-zh_CN界面汉化](https://github.com/dtlnor/stable-diffusion-webui-localization-zh_CN.git)
+- [adetailer脸部修复](https://github.com/Bing-su/adetailer.git)
