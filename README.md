@@ -8,6 +8,7 @@
 - [ComfyUI_IPAdapter_plus风格迁移](https://github.com/cubiq/ComfyUI_IPAdapter_plus.git)
 - [controlnet预处理器](https://github.com/Fannovel16/comfyui_controlnet_aux.git)
 - [ComfyUI-Flowty-TripoSR单图推理出3d模型obj](https://github.com/flowtyone/ComfyUI-Flowty-TripoSR.git)
+- [ComfyUI-Advanced-ControlNet好用的contrlnet](https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet.git)
 - 
 
 # <big>krita绘画软件和comfyUI结合的插件</big>
