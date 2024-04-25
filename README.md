@@ -3,8 +3,8 @@
 <big>推荐comfyUI必备实用节点</big>
 - [comfyui-workspace-manager管理工作流](https://github.com/11cafe/comfyui-workspace-manager.git)
 - [comfyui-browser浏览你生成的图像](https://github.com/talesofai/comfyui-browser.git)
-- [AIGODLIKE-ComfyUI-Translation翻译](https://github.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation.git)
-- [ComfyUI_VLM_nodes图像反推自然语言](https://github.com/gokayfem/ComfyUI_VLM_nodes.git)
+- [AIGODLIKE-ComfyUI-Translation界面汉化](https://github.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation.git)
+- [ComfyUI_VLM_nodes输入图像反推出自然语言](https://github.com/gokayfem/ComfyUI_VLM_nodes.git)
 
 <big>下面是krita绘画软件和comfyUI结合的工具</big>
 - [krita-ai-diffusion安装在krita的插件调用comfyUI](https://github.com/Acly/krita-ai-diffusion.git)
