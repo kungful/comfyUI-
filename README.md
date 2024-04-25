@@ -7,6 +7,7 @@
 - [ComfyUI_VLM_nodes输入图像反推出自然语言](https://github.com/gokayfem/ComfyUI_VLM_nodes.git)
 - [ComfyUI_IPAdapter_plus风格迁移](https://github.com/cubiq/ComfyUI_IPAdapter_plus.git)
 - [controlnet预处理器](https://github.com/Fannovel16/comfyui_controlnet_aux.git)
+- [ComfyUI-Flowty-TripoSR单图推理出3d模型obj](https://github.com/flowtyone/ComfyUI-Flowty-TripoSR.git)
 - 
 
 # <big>krita绘画软件和comfyUI结合的插件</big>
