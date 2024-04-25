@@ -4,4 +4,4 @@
 - [comfyui-workspace-manager管理工作流](https://github.com/11cafe/comfyui-workspace-manager.git)
 - [comfyui-browser浏览你生成的图像](https://github.com/talesofai/comfyui-browser.git)
 
-[AIGODLIKE-ComfyUI-Translation翻译](https://github.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation.git)
+-[AIGODLIKE-ComfyUI-Translation翻译](https://github.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation.git)
