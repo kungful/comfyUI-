@@ -5,7 +5,12 @@
 - [comfyui-browser浏览你生成的图像](https://github.com/talesofai/comfyui-browser.git)
 - [AIGODLIKE-ComfyUI-Translation界面汉化](https://github.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation.git)
 - [ComfyUI_VLM_nodes输入图像反推出自然语言](https://github.com/gokayfem/ComfyUI_VLM_nodes.git)
+- [ComfyUI_IPAdapter_plus风格迁移](https://github.com/cubiq/ComfyUI_IPAdapter_plus.git)
+- [controlnet预处理器](https://github.com/Fannovel16/comfyui_controlnet_aux.git)
+- 
 
 # <big>krita绘画软件和comfyUI结合的插件</big>
 - [krita-ai-diffusion安装在krita的插件调用comfyUI](https://github.com/Acly/krita-ai-diffusion.git)
 - [comfyui-tooling-nodes安装在comfyUI,为了和krita插件进行通讯](https://github.com/Acly/comfyui-tooling-nodes.git)
+- [krita-ai-tools在krita的智能选区插件](https://github.com/Acly/krita-ai-tools.git)
+- [BlenderLayer将blender的图像传递到krita的三维](https://github.com/Yuntokon/BlenderLayer.git)
