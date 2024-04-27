@@ -7,7 +7,7 @@
 - [AIGODLIKE-ComfyUI-Translation界面汉化](https://github.com/AIGODLIKE/AIGODLIKE-ComfyUI-Translation.git)
 - [ComfyUI_VLM_nodes输入图像反推出自然语言](https://github.com/gokayfem/ComfyUI_VLM_nodes.git)
 - [ComfyUI_IPAdapter_plus风格迁移](https://github.com/cubiq/ComfyUI_IPAdapter_plus.git)
-- [controlnet预处理器](https://github.com/Fannovel16/comfyui_controlnet_aux.git)
+- [comfyui_controlnet_aux预处理器](https://github.com/Fannovel16/comfyui_controlnet_aux.git)
 - [这个comfyUI自带了 ComfyUI-Advanced-ControlNet好用的contrlnet](https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet.git)
 - [ComfyUI-Flowty-TripoSR单图推理出3d模型obj](https://github.com/flowtyone/ComfyUI-Flowty-TripoSR.git)
 - [sdxl_prompt_styler风格提示词](https://github.com/twri/sdxl_prompt_styler.git)
