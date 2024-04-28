@@ -12,6 +12,11 @@
 - [这个comfyUI自带了 ComfyUI-Advanced-ControlNet好用的contrlnet](https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet.git)
 - [ComfyUI-Flowty-TripoSR单图推理出3d模型obj](https://github.com/flowtyone/ComfyUI-Flowty-TripoSR.git)
 - [sdxl_prompt_styler风格提示词](https://github.com/twri/sdxl_prompt_styler.git)
+
+# <big>模型</big>
+- [IPadapter模型_SDXL](https://huggingface.co/h94/IP-Adapter/tree/main/sdxl_models)to models/ipadapter
+- [IPadapter模型_SD1.5](https://huggingface.co/h94/IP-Adapter/tree/main/models)
+- [ipadapter对应的clip模型_SDXL](https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/tree/main)
 - 
 
 # <big>krita绘画软件和comfyUI结合的插件</big>
