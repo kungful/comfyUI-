@@ -12,6 +12,7 @@
 - [这个comfyUI自带了 ComfyUI-Advanced-ControlNet好用的contrlnet](https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet.git)
 - [ComfyUI-Flowty-TripoSR单图推理出3d模型obj](https://github.com/flowtyone/ComfyUI-Flowty-TripoSR.git)
 - [sdxl_prompt_styler风格提示词](https://github.com/twri/sdxl_prompt_styler.git)
+- [图像按边放大Derfuu_ComfyUI_ModdedNodes这个插件需要手动下载压缩包解压到插件目录解压](https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git)
 
 # <big>模型</big>
 - [IPadapter模型_(SDXL)](https://huggingface.co/h94/IP-Adapter/tree/main/sdxl_models)to  models/ipadapter
