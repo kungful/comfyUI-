@@ -23,6 +23,7 @@
 
 - [animatediff](https://huggingface.co/guoyww/animatediff/tree/main)
 - [controlnet](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main)
+- [AnimateLCM](https://huggingface.co/wangfuyun/AnimateLCM/tree/main)
 - 
 
 # <big>krita绘画软件和comfyUI结合的插件</big>
