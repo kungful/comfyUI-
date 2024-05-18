@@ -20,6 +20,9 @@
 - [Ipadapter对应的clip模型_(SDXL)](https://huggingface.co/laion/CLIP-ViT-H-14-laion2B-s32B-b79K/tree/main)to models/clip_vision
 - [IPadapter对应的clip模型 (SD1.5)](https://huggingface.co/h94/IP-Adapter/tree/main/models/image_encoder)to models/clip_vison
 - [这里也有汇总](https://github.com/Acly/krita-ai-diffusion/wiki/ComfyUI-Setup)
+
+- [animatediff](https://huggingface.co/guoyww/animatediff/tree/main)
+- [controlnet](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main)
 - 
 
 # <big>krita绘画软件和comfyUI结合的插件</big>
