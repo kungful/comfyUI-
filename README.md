@@ -49,5 +49,6 @@
 - [多彩动漫而生底模helloflatcolorful2d](https://civitai.com/models/113447/helloflatcolorful2d)
 - [纯运动模型animatediff名称motionmodelnsfw650存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://civitai.com/models/139237/motion-model-experiments)
 - [纯运动模型animatediff名称temporaldiff存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/CiaraRowles/TemporalDiff/tree/main)
--  [纯运动模型animatediff名称v3_sd15存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/guoyww/animatediff/tree/main)
-- 
+- [纯运动模型animatediff名称v3_sd15存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/guoyww/animatediff/tree/main)
+- [纯运动模型animatediff名称AnimateLCM存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/wangfuyun/AnimateLCM/tree/main)
+- [animateLCM视频教程](https://www.youtube.com/watch?v=W1KL115ASmQ) 
