@@ -37,3 +37,17 @@
 # <big>A1111-webUI必备插件</big>
 - [stable-diffusion-webui-localization-zh_CN界面汉化](https://github.com/dtlnor/stable-diffusion-webui-localization-zh_CN.git)
 - [adetailer脸部修复](https://github.com/Bing-su/adetailer.git)
+
+
+
+# <big> 支持animatediff的1.5底模</big>
+- [1.5写实底模](https://civitai.com/models/144249?modelVersionId=438858)
+- [2.5D漫画底模](https://civitai.com/models/248011/astranime)
+- [漫画底模](https://civitai.com/models/101254/hellokid2d)
+- [伪厚涂imp](https://civitai.com/models/56680/imp)
+- [动漫mistoonAnime](https://civitai.com/models/24149/mistoonanime)
+- [多彩动漫而生底模helloflatcolorful2d](https://civitai.com/models/113447/helloflatcolorful2d)
+- [纯运动模型animatediff名称motionmodelnsfw650存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://civitai.com/models/139237/motion-model-experiments)
+- [纯运动模型animatediff名称temporaldiff存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/CiaraRowles/TemporalDiff/tree/main)
+-  [纯运动模型animatediff名称v3_sd15存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/guoyww/animatediff/tree/main)
+- 
