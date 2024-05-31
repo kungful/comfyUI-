@@ -51,4 +51,7 @@
 - [纯运动模型animatediff名称temporaldiff存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/CiaraRowles/TemporalDiff/tree/main)
 - [纯运动模型animatediff名称v3_sd15存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/guoyww/animatediff/tree/main)
 - [纯运动模型animatediff名称AnimateLCM存放在D:\Comfy\ComfyUI_windows_portable\ComfyUI\custom_nodes\ ComfyUI-AnimateDiff-Evolved \models或者comfyUI下的models\animatediff_models](https://huggingface.co/wangfuyun/AnimateLCM/tree/main)
-- [animateLCM视频教程](https://www.youtube.com/watch?v=W1KL115ASmQ) 
+- [animateLCM视频教程](https://www.youtube.com/watch?v=W1KL115ASmQ)
+
+  # <big> SDXL模型</big>
+- [TTPLanet_SDXL_Controlnet_Tile_Realistic](https://civitai.com/models/330313/ttplanetsdxlcontrolnettilerealistic)
