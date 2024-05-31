@@ -40,7 +40,7 @@
 
 
 
-# <big> 支持animatediff的1.5底模</big>
+# <big> 支持animatediff的1.5底模，和纯运动模型animatediff</big>
 - [1.5写实底模](https://civitai.com/models/144249?modelVersionId=438858)
 - [2.5D漫画底模](https://civitai.com/models/248011/astranime)
 - [漫画底模](https://civitai.com/models/101254/hellokid2d)
