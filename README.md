@@ -56,3 +56,4 @@
   # <big> SDXL模型</big>
 - [TTPLanet_SDXL_Controlnet_Tile_Realistic](https://civitai.com/models/330313/ttplanetsdxlcontrolnettilerealistic)
 - SDXL放大工作流：https://openart.ai/workflows/gJQkI6ttORrWCPAiTaVO
+- SDXL 线条TEED预处理器：https://github.com/TheMistoAI/ComfyUI-Anyline
