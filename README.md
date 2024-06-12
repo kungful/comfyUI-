@@ -54,6 +54,8 @@
 - [animateLCM视频教程](https://www.youtube.com/watch?v=W1KL115ASmQ)
 
   # <big> SDXL模型</big>
-- [TTPLanet_SDXL_Controlnet_Tile_Realistic](https://civitai.com/models/330313/ttplanetsdxlcontrolnettilerealistic)
+- [添加细节TTPLanet_SDXL_Controlnet_Tile_Realistic](https://civitai.com/models/330313/ttplanetsdxlcontrolnettilerealistic)(https://civitai.com/models/330313/ttplanetsdxlcontrolnettilerealistic)
 - SDXL放大工作流：https://openart.ai/workflows/gJQkI6ttORrWCPAiTaVO
 - SDXL 线条TEED预处理器：https://github.com/TheMistoAI/ComfyUI-Anyline    与之搭配的模型：https://huggingface.co/TheMistoAI/MistoLine
+- 泛化最好SDXL线条controlnet模型：https://huggingface.co/TheMistoAI/MistoLine
+- 
