@@ -13,7 +13,8 @@
 - [ComfyUI-Flowty-TripoSR单图推理出3d模型obj](https://github.com/flowtyone/ComfyUI-Flowty-TripoSR.git)
 - [sdxl_prompt_styler风格提示词](https://github.com/twri/sdxl_prompt_styler.git)
 - [图像按边放大Derfuu_ComfyUI_ModdedNodes这个插件需要手动下载压缩包解压到插件目录解压](https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes/tree/588f4ccbe2169298099e1578f6ff0d4b56d90cf8)
-
+- 加速库依赖：onnxruntime,比如dw预处理器的onnx模型龟速就是这个需要安装，onnxruntime-gpu  然后onnxruntime支持cuda11.8最好。 xformers也是加速
+- 
 # <big>模型</big>
 - [IPadapter模型_(SDXL)](https://huggingface.co/h94/IP-Adapter/tree/main/sdxl_models)to  models/ipadapter
 - [IPadapter模型_(SD1.5)](https://huggingface.co/h94/IP-Adapter/tree/main/models)to   models/ipadapter
