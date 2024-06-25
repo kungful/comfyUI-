@@ -1,5 +1,6 @@
 如果遇到缺失节点，请到[comfyUI manager](https://github.com/ltdrdata/ComfyUI-Manager.git)安装。有些全新节点或者是节点作者维护移交给其它开发者都可能缺失或者报错，这时候需要通过manager导航节点项目地址看文档，进行手动安装依赖或者卸载重装。依赖文件`requirements.txt`请使用comfyUI的嵌入式python或者虚拟环境python进行安装。
 
+从零部署嵌入式python包注意事项，安装pip工具的时候需要把pth的文件注释掉最后一行
 # <big>comfyUI必备实用插件</big>
 - [comfyUI官网](https://github.com/comfyanonymous/ComfyUI.git)
 - [ComfyUI-Manager管理器](https://github.com/ltdrdata/ComfyUI-Manager.git)
