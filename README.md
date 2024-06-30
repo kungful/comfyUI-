@@ -16,6 +16,7 @@
 - [图像按边放大Derfuu_ComfyUI_ModdedNodes这个插件需要手动下载压缩包解压到插件目录解压](https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes/tree/588f4ccbe2169298099e1578f6ff0d4b56d90cf8)
 
 - 另辟蹊径统一安装python插件依赖的项目：https://github.com/YanWenKun/ComfyUI-Windows-Portable.git
+- 收集comfyui节点排名前一百个：https://github.com/liusida/top-100-comfyui.git
 - 区域提示：https://github.com/huchenlei/ComfyUI_densediffusion.git
 - 节点和工作流统一访问：https://github.com/Nuked88/ComfyUI-N-Sidebar.git
 - 加速库依赖：onnxruntime,比如dw预处理器的onnx模型龟速就是这个需要安装，onnxruntime-gpu  然后onnxruntime支持cuda11.8最好。 xformers也是加速
