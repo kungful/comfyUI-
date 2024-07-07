@@ -22,7 +22,8 @@
 - 收集comfyui节点排名前一百个：https://github.com/liusida/top-100-comfyui.git
 - 区域提示：https://github.com/huchenlei/ComfyUI_densediffusion.git
 - 节点和工作流统一访问：https://github.com/Nuked88/ComfyUI-N-Sidebar.git
-- 加速库依赖：onnxruntime,比如dw预处理器的onnx模型龟速就是这个需要安装，onnxruntime-gpu  然后onnxruntime支持cuda11.8最好，当你的电脑安装了cuda12.1时可能onnxruntime的库依赖报错，这时候你需要再安装一个cuda，比如11.8或者12.4。 xformers也是加速
+- 加速库依赖：onnxruntime,比如dw预处理器的onnx模型龟速就是这个需要安装，onnxruntime-gpu  然后onnxruntime支持cuda11.8最好，当你的电脑安装了cuda12.1时可能onnxruntime的库依赖报错，这时候你需要再安装一个cuda，比如11.8或者12.4。
+-  xformers也是加速，目前它只支持到最高torch 2.3.0 
 - 
 # <big>模型</big>
 - [IPadapter模型_(SDXL)](https://huggingface.co/h94/IP-Adapter/tree/main/sdxl_models)to  models/ipadapter
