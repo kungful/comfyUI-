@@ -1,0 +1,40 @@
+作用：
+       二进制分发：.whl 文件是预编译的二进制格式，可以包含编译后的 C/C++ 扩展和其他二进制文件，使得安装过程更快，不需要在用户机器上重新编译。
+
+        跨平台兼容性：.whl 文件可以针对不同的 Python 版本和操作系统生成，确保在不同环境下都能正确安装。
+
+         简化安装过程：用户可以直接使用 pip install 命令安装 .whl 文件，而不需要手动编译源码。
+
+        版本控制：.whl 文件包含了包的元数据和依赖信息，确保安装的包版本和依赖关系正确。
+
+
+
+生成 .whl 文件的步骤
+
+        准备源码：确保源码目录中包含 setup.py 文件，这是构建和打包 Python 包的标准方式。
+
+       安装构建工具：通常需要安装 setuptools 和 wheel 包，可以使用 pip install setuptools wheel 命令安装。
+
+       构建：在源码目录中运行 python setup.py bdist_wheel 命令，生成 .whl 文件。
+
+       分发：生成的 .whl 文件可以在本地测试安装，也可以上传到 PyPI 或其他包仓库供用户下载和安装。、
+
+      虽然 setup.py 是传统的、广泛使用的方式，但并不是唯一的方式。随着 Python 包管理的发展，出现了更多现代、简化的工具和方法，如               pyproject.toml、setup.cfg、flit 和 poetry，它们提供了更灵活、更易于维护的方式来定义和构建 Python 包。选择哪种方式取决于项目需求和个人偏好。   
+
+
+
+打印编译的日志文件：
+       这是stup.py:
+       确保你已经安装了 setuptools 和 wheel,（pip install setuptools wheel）
+        然后：python setup.py bdist_wheel > build_log.txt 2>&1
+        
+        这是pyproject.toml：
+        确保你已经安装了 setuptools 和 wheel
+        然后：python -m build > build_log.txt 2>&1
+                                
+
+
+
+
+总结来说，生成 .whl 文件是为了方便、快速、可靠地分发和安装 Python 包，利用预编译的二进制格式和元数据信息简化安装过程和管理依赖关系。
+简而言之，.whl 文件是Python包的“快餐版”，预先做好，方便快捷，全球共享。
