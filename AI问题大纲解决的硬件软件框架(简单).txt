@@ -1,0 +1,54 @@
+AI的硬件软件框架（简单）：
+
+硬件层：
+
+1，英伟达显卡，俗称N卡，建议使用 3000 系列及以上版本以获得最佳性能。VRAM（显存） 越大越好。
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+系统层AI必装：
+
+1， visual studio2022 (谷歌搜能找到下载，里面有C++库 insightface换脸是必须要的也是cuda的前提；安装勾选c++的桌面开发，NET桌面开发，node.js开发)
+        visual studio2022下载地址：https://visualstudio.microsoft.com/zh-hans/vs/
+
+2， 显卡驱动；
+        英伟达显卡 驱动下载地址：https://www.nvidia.cn/geforce/drivers/
+
+3，  cuda12.1 或 11.8是主流（装12.1或者两个都装，onnxruntime安装默认只支持11.8）；
+      cuda12.1下载地址：https://developer.nvidia.com/cuda-12-1-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04
+      cuda11.8 下载地址：https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+整合包独立python环境层：
+1，python3.10默认可以直接安装insightface依赖库，
+python3.11需要加上地址安装 用这条命令：在终端输入：你电脑路径\comfyUI\python_embeded\python.exe pip install https://github.com/Gourieff/Assets/raw/main/Insightface/insightface-0.7.3-cp311-cp311-win_amd64.whl
+
+2，xformers加速库 最近更新到0.0.27支持了torch2.3.1 ，所以不用纠结torch版本了，直接装：安装命令官方文档有
+       xofurmer的官网：https://github.com/facebookresearch/xformers
+
+3，pytorch默认安装是最新的2.3.1，xformers支持了，直接装，torch官方有安装命令。需要对应自己系统的cuda版本
+     pytrch官方安装说明地址：https://pytorch.org/
+
+4, onnxruntime 加速库，默认安装只支持cuda11.8：pip install onnxruntime-gpu ；cuda12.1需要加上官方提供网址就行很简单
+  这是onnxruntime官方的安装说明，里面都有安装命令：https://onnxruntime.ai/docs/install/
+
+
+5,如果管理器安装不了插件那就是git的代理端口没设置，一般是socks5
+git config --global http.https://github.com.proxy socks5://127.0.0.1:40008
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+报错解决方法：
+
+1，看终端报错信息，直接复制问ai。找不到直接搜谷歌
+
+2，查环境包冲突项，在终端输入：你电脑路径\comfyUI\python_embeded\python.exe pip check  这个命令是查看环境包的冲突包有哪些
+      然后不指定版本卸载重装这个冲突的依赖
+
+3，如果是插件报错，最好的方法是认真看插件作者官网里的文档，看文档，看文档，看文档
+
