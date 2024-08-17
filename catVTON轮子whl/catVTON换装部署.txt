@@ -1,0 +1,16 @@
+前提：安装visual studio 2019
+
+如何安装，首先去这个地址下载zip包：https://github.com/Zheng-Chong/CatVTON/releases/tag/ComfyUI
+然后放到插件目录解压
+如果有轮子就直接whl安装
+
+如果没有
+编译的前提添加系统环境变量：
+    添加comfyui的python.exe路径到系统变量
+    需要cl.exe全局变量（Hostx64\x64的意思64位系统编译生成64位的可执行文件或库），，还有comfyui里的python环境的ninja.exe
+（用这个工具搜索https://www.voidtools.com/zh-cn/，去掉路径直接搜就有了）
+
+然后去下载他的依赖库Detectron2和子项目DensePose（谷歌搜就有是fecebook的项目）
+进行编译
+编译的命令是： python setup.py bdist_wheel 
+打印日志：python setup.py bdist_wheel > build_log.txt 2>&1

@@ -1,0 +1,14 @@
+这个轮子基于python3.10,torch2.3.0，cuda12.1
+
+你的电脑要有visual studio 2019
+以及cuda
+安装:
+   进入你的python环境目录：
+    .\python.exe -m pip install detectron2-0.6-cp310-cp310-win_amd64.whl
+     .\python.exe -m pip install detectron2-0.6-cp310-cp310-win_amd64.whl
+   如果报错，换一下顺序安装试试
+
+编译的前提添加系统环境变量：
+    添加comfyui的python.exe路径到系统变量
+    需要cl.exe全局变量（Hostx64\x64的意思64位系统编译生成64位的可执行文件或库），，还有comfyui里的python环境的ninja.exe
+（用这个工具搜索https://www.voidtools.com/zh-cn/，去掉路径直接搜就有了）
