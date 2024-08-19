@@ -1,0 +1,82 @@
+ 
+#生成和Linux服务器的ssh密钥 默认路径  私钥文件 C:\Users\blend/.ssh/id_rsa   和   公钥文件  C:\Users\blend/.ssh/id_rsa.pub  密钥指纹：等等
+
+ssh-keygen -t rsa -b 4096 -C "blenderkrita@gmail.com"
+
+
+#将私钥文件丢给服务器，用户名在重置密码那里
+
+ssh -i C:\Users\blend\.ssh\id_rsa ubuntu@42.194.140.98  
+
+
+#将本地端口暴露在服务器，服务器做跳板机
+端口转发:
+
+反向隧道 (-R): 远程服务器上的端口 2100 转发到本地主机上的端口 8188。
+
+宝塔面板ssh密钥，默认用户名是root
+还有密钥指纹更改了要删除本地电脑的C:\Users\blend\.ssh\known_hosts
+
+让本地电脑打开服务器内网的端口的命令如下：s
+ssh -L 8888:localhost:8888 root@106.53.222.72
+
+ ssh -i C:\Users\blend\.ssh\id_rsa -N -f -R 2100:127.0.0.1:8188 ubuntu@42.194.140.98
+#成：
+ssh -i C:\Users\blend\.ssh\id_rsa -N -R 2100:127.0.0.1:8188 ubuntu@106.53.222.72
+新:
+ssh -i C:\Users\blend\.ssh\id_rsa -N -R 8188:127.0.0.1:8188 ubuntu@43.134.183.133
+
+ssh -R 8188:127.0.0.1:8188 ubuntu@43.134.20.333
+
+心跳包（防止超时断开隧道）：
+sudo  vim /etc/ssh/sshd_config
+更改：
+ClientAliveInterval 60  #六十秒发送一次空包
+ClientAliveCountMax 3  #空包的数量
+
+
+本地隧道 (-L): 本地主机上的端口 2100 转发到远程服务器上的端口 8188。
+
+
+ssh -i C:\Users\blend\.ssh\id_rsa -L 2100:localhost:8188 ubuntu@42.194.140.98
+
+
+
+#要想其它机器也能访问，需要sshd服务开启GatewayPorts
+
+vim /etc/ssh/sshd_config
+将#GatewayPorts no改为GatewayPorts yes
+
+刷新：
+systemctl restart sshd.service
+重启ssh：
+sudo systemctl restart sshd
+sudo systemctl restart ssh
+
+#检查 SSH 是否安装：
+#你可以使用以下命令检查 SSH 服务是否安装：
+dpkg -l | grep ssh
+
+
+#在服务器查看端口是否被监听到
+curl http://127.0.0.1:2100
+
+telnet 127.0.0.1 2100
+
+ss -tuln | grep 2100
+
+查看指定端口谁占用“
+sudo lsof -i :8188
+杀掉这些占用的PID
+sudo kill -9 1234
+
+
+#查看端口的相关进程
+lsof -i :2100
+
+
+#其他主机访问需要密钥验证
+编辑SSH服务配置文件/etc/ssh/sshd_config，确保以下设置
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+PasswordAuthentication no
