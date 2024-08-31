@@ -52,3 +52,5 @@ git config --global http.https://github.com.proxy socks5://127.0.0.1:40008
 
 3，如果是插件报错，最好的方法是认真看插件作者官网里的文档，看文档，看文档，看文档
 
+4，使用pip check检索所有冲突的依赖模块
+    pip check
