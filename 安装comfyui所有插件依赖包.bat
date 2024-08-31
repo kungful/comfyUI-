@@ -33,14 +33,22 @@ REM 检查并解决包冲突
 echo Checking for package conflicts...
 "%python_embeded%" -m pip check 2> conflicts.txt
 if exist conflicts.txt (
+    REM 提取冲突包的名称并保存到临时文件
+    set "conflicting_packages="
     for /f "tokens=*" %%i in (conflicts.txt) do (
         echo %%i | findstr /i /r /c:"^ERROR:.*" >nul
         if !errorlevel! equ 0 (
             for /f "tokens=2 delims= " %%j in ("%%i") do (
-                echo Uninstalling conflicting package: %%j
-                "%python_embeded%" -m pip uninstall -y %%j
+                set "conflicting_packages=!conflicting_packages! %%j"
             )
         )
+    )
+    echo !conflicting_packages! > conflicting_packages.txt
+
+    REM 卸载冲突包
+    for /f "tokens=*" %%k in (conflicting_packages.txt) do (
+        echo Uninstalling conflicting package: %%k
+        "%python_embeded%" -m pip uninstall -y %%k
     )
     del conflicts.txt
 ) else (
@@ -54,6 +62,18 @@ for %%f in (%requirements_files:~1%) do (
     if errorlevel 1 (
         echo Failed to install dependencies from %%f
     )
+)
+
+REM 重新安装冲突包
+if exist conflicting_packages.txt (
+    for /f "tokens=*" %%l in (conflicting_packages.txt) do (
+        echo Reinstalling conflicting package: %%l
+        "%python_embeded%" -m pip install %%l
+        if errorlevel 1 (
+            echo Failed to reinstall package %%l
+        )
+    )
+    del conflicting_packages.txt
 )
 
 :end
