@@ -27,7 +27,22 @@ pip install git+https://github.com/facebookresearch/xformers.git@铁铁我是哈
 
 sh
 复制
-CFLAGS="-IC:\Users\hua\Desktop\comfyui111\python_embeded\include" pip install xformers
+在 Windows 命令行中设置 CFLAGS 环境变量并运行 pip install 命令，可以按照以下步骤进行：
+打开命令提示符：
+按 Win + R，输入 cmd，然后按回车，打开命令提示符。
+
+设置环境变量并运行 pip install：
+在命令提示符中，输入以下命令：
+这个命令会临时设置 CFLAGS 环境变量，并运行 pip install xformers 命令。
+
+ cmd终端
+set CFLAGS=-IC:\Users\hua\Desktop\comfyui111\python_embeded\include
+pip install xformers
+
+PowerShell终端
+CFLAGS="-IC:\Users\hua\Desktop\comfyui111\python_embeded\include"
+pip install xformers
+
 检查 CUDA 和 PyTorch 版本：
 确保你安装的 CUDA 和 PyTorch 版本是兼容的。你可以通过以下命令检查 PyTorch 版本：
 
