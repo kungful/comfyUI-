@@ -58,6 +58,16 @@ python -c "import torch; print(torch.__version__)"
 
 使用编译好的文件安装GitHub项目代码
 
+预构建的二进制文件：xformers项目可能不会直接提供预构建的二进制文件，因为它们通常是作为库来使用的，需要用户自己根据其环境进行安装和构建。但是，你可以通过以下方式获取预构建的二进制文件：
+
+PyPI：xformers可能会发布到Python包索引（PyPI），你可以通过pip install xformers来安装。
+
+Conda：如果xformers支持Conda，你可以在Anaconda或Miniconda中通过conda install xformers来安装。
+
+Docker镜像：有时候，项目会提供Docker镜像，包含预构建的环境和依赖。你可以在项目的README或相关文档中查找Docker镜像的信息。
+
+构建脚本：项目中可能包含构建脚本（如setup.py或Makefile），你可以使用这些脚本来构建项目。
+
 访问GitHub仓库：
 首先，打开浏览器并访问xformers项目的GitHub仓库页面。你可以通过搜索引擎搜索“xformers GitHub”来找到正确的仓库链接，或者直接访问以下链接：
 https://github.com/facebookresearch/xformers
@@ -75,6 +85,8 @@ https://github.com/facebookresearch/xformers
 --------------------------------------------------------- ------------------------------------------------------------------
 
 构建编译文件（如果需要）：
+需要添加cl.exe到系统环境变量。
+
 如果仓库中没有提供预编译的文件，你可能需要自己构建。这通常涉及以下步骤：
 
 克隆仓库到本地：使用git clone命令将仓库克隆到你的本地机器。
