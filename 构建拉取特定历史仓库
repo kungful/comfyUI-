@@ -58,6 +58,8 @@ python -c "import torch; print(torch.__version__)"
 
 使用编译好的文件安装GitHub项目代码
 
+pypi储存了二进制构建好的文件直接命令安装就好，需要你找到历史更新的GitHub对应日期到pypi库的版本，就能用pip install 名称=版本
+
 预构建的二进制文件：xformers项目可能不会直接提供预构建的二进制文件，因为它们通常是作为库来使用的，需要用户自己根据其环境进行安装和构建。但是，你可以通过以下方式获取预构建的二进制文件：
 
 PyPI：xformers可能会发布到Python包索引（PyPI），你可以通过pip install xformers来安装。
