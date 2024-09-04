@@ -1,0 +1,156 @@
+{
+  "last_node_id": 30,
+  "last_link_id": 21,
+  "nodes": [
+    {
+      "id": 20,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": 1062,
+        "1": 375,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 19,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6,
+          "label": "字符串"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "C:\\Users\\blend\\Desktop\\comfyUI\\comfyUI\\jie.wav"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "FL_CodeNode",
+      "pos": {
+        "0": 559,
+        "1": 359,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": [
+        481.8928602226845,
+        616.5286118658528
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input",
+          "type": "*",
+          "link": null,
+          "label": "input"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_0",
+          "type": "*",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "label": "output_0",
+          "slot_index": 0
+        },
+        {
+          "name": "output_1",
+          "type": "*",
+          "links": null,
+          "shape": 3,
+          "label": "output_1"
+        },
+        {
+          "name": "output_2",
+          "type": "*",
+          "links": null,
+          "shape": 3,
+          "label": "output_2"
+        },
+        {
+          "name": "output_3",
+          "type": "*",
+          "links": null,
+          "shape": 3,
+          "label": "output_3"
+        }
+      ],
+      "title": "FL_CodeNode",
+      "properties": {
+        "Node name for S&R": "FL_CodeNode"
+      },
+      "widgets_values": [
+        "import urllib.request\nimport os\nimport winsound\n\n# 播放一个WAV文件\nwinsound.PlaySound('path_to_your_file.wav', winsound.SND_FILENAME)\n# 定义音频文件的URL\nurl = \"https://github.com/kungful/comfyUI-/blob/46ea3ddfb70b12624004318ff2d4a1134725a2e8/jie.wav?raw=true\"\n\n# 定义本地文件路径（相对路径）\nlocal_file_path = \"jie.wav\"\n\n# 检查本地文件是否存在\nif not os.path.exists(local_file_path):\n    print(\"File does not exist. Downloading...\")\n    try:\n        # 使用urllib.request模块下载音频文件\n        urllib.request.urlretrieve(url, local_file_path)\n        print(\"Download complete.\")\n    except Exception as e:\n        print(f\"Error occurred while downloading: {e}\")\nelse:\n    print(\"File already exists. Skipping download.\")\n\n# 获取当前工作目录\ncurrent_directory = os.getcwd()\n\n# 组合路径\nfull_path = os.path.join(current_directory, local_file_path)\n\n# 播放一个WAV文件\nwinsound.PlaySound(full_path, winsound.SND_FILENAME)\n\n# 输出结果\noutputs[0] = full_path\n\n# 使用os模块调用系统命令播放音频文件\n#if os.path.exists(local_file_path):\n    #os.system(\"start jie.wav\")  # 适用于Windows\n    # os.system(\"afplay jie.wav\")  # 适用于macOS\n    # os.system(\"aplay jie.wav\")  # 适用于Linux\n",
+        "./res/hello.py",
+        false
+      ],
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    }
+  ],
+  "links": [
+    [
+      19,
+      10,
+      0,
+      20,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.4122927695244594,
+      "offset": [
+        -118.32448592171397,
+        -306.7826391604331
+      ]
+    },
+    "workspace_info": {
+      "id": "Drlav55bTiq2pFDzIo1cN"
+    }
+  },
+  "version": 0.4
+}
