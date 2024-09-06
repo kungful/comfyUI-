@@ -1,0 +1,36 @@
+我的环境是windows11  cuda12.1  python10.14 torch2.3.0 
+
+去插件源码地址下载预构建文件安装https://github.com/MrForExample/ComfyUI-3D-Pack.git 和 https://github.com/MrForExample/Comfy3D_Pre_Builds.git
+目前只提供了cuda11.8和12.1的预构建
+
+然后需要visuals video 2019的cl.exe目录加入到系统环境变量，用voidtools工具https://www.voidtools.com/zh-cn/搜就好删掉目录就能全局电脑文件搜索了
+
+然后是把ninja.exe的目录添加到系统环境变量，把comfyui的python环境的ninja.exe目录加进去就行，加带有python图标那个，没图标的我也加了（这个的排序我是第一靠前），保险起见。按照上面的cl.exe搜出ninja.exe就好。
+
+python环境需要安装3Dpack的轮子，很简单pip install就行，插件下载到comfyui插件目录解压就好了
+
+然后安装3Dpack的依赖文件requirements.txt ,命令是：.\python.exe -m pip install -r requirements.txt
+
+不出意外的话一定会报错，这时候需要构建pip的模块构建wheel也就是轮子。安装torch-scatter这个模块，这个模块如果visuals video 版本不对是构建不成功的
+我用的是visuals video2019，上面的步骤cl.exe和ninja添加了系统环境变量就行 ，先卸载这个模块.\python.exe -m pip uninstall torch-scatter
+ 然后安装.\python.exe -m pip install torch-scatter,它就会自动构建wheel安装了。
+
+再次启动comfyui不出意外的话一定报错
+
+这时候提示pytorch3d无法调用
+方法就是构建，上面的cl.exe和ninja.exe加入系统环境变量后就可以自动构建安装了
+先卸载.\python.exe -m pip uninstall pytorch3d
+去项目官网看安装方法https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
+输入命令pip install "git+https://github.com/facebookresearch/pytorch3d.git"进行安装
+需要环境变量C:\Users\blend\Desktop\comfyUI\comfyUI\python_embeded\Scripts调用pytorch3d
+
+成功之后就差模型了
+
+这时候启动comfyui我是报错的拉取u2net.onnx模型提示哈希错误，所以只能手动下载，按照提示放到指定目录
+下载地址https://huggingface.co/tomjackson2023/rembg/tree/main 放到C:\Users\blend\.u2net路径
+
+这时候启动还是会报错的，提示onnxruntime调用不了
+我的方法是更新onnxruntime-gpu的，命令：.\python.exe -m pip install --upgrade onnxruntime-gpu
+这个也更新一下：.\python.exe -m pip install --upgrade rembg
+
+再次启动就能成功载入3Dpack了
