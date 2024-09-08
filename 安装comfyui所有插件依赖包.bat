@@ -21,52 +21,32 @@ if "!requirements_files!" equ "" (
     goto :end
 )
 
-REM 备份当前环境
-echo Backing up current environment...
-set "backup_dir=backup_%date:~-4,4%%date:~-7,2%%date:~-10,2%"
-mkdir "%backup_dir%"
-xcopy /E /I "%github_projects_path%" "%backup_dir%"
-
 REM 升级pip
 echo Upgrading pip...
 "%python_embeded%" -m pip install --upgrade pip
 if errorlevel 1 (
     echo Failed to upgrade pip.
-    goto :restore_backup
+    goto :end
 )
+
 
 REM 更新 diffusers 库
 echo Updating diffusers library...
 "%python_embeded%" -m pip install -U diffusers
 if errorlevel 1 (
     echo Failed to update diffusers.
-    goto :restore_backup
+    goto :end
 )
 
 REM 安装所有 requirements.txt 文件中的依赖项
 for %%f in (%requirements_files:~1%) do (
     echo Installing dependencies from %%f
     call :install_with_retry "%%f"
-    if errorlevel 1 (
-        goto :restore_backup
-    )
 )
 
 :end
 endlocal
 pause
-goto :eof
-
-REM 恢复备份
-:restore_backup
-echo Restoring backup...
-rmdir /S /Q "%github_projects_path%"
-xcopy /E /I "%backup_dir%" "%github_projects_path%"
-rmdir /S /Q "%backup_dir%"
-echo Backup restored.
-endlocal
-pause
-goto :eof
 
 REM 安装依赖项并重试
 :install_with_retry
@@ -81,7 +61,6 @@ if errorlevel 1 (
         goto :retry_loop
     ) else (
         echo Failed to install dependencies from %req_file% after multiple attempts.
-        exit /b 1
     )
 )
-exit /b 0
+goto :eof
