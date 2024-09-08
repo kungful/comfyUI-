@@ -29,29 +29,13 @@ if errorlevel 1 (
     goto :end
 )
 
-REM 清理无效的分布目录
-echo Cleaning invalid distributions...
-for /d %%d in ("%python_embeded%\Lib\site-packages\~*") do (
-    echo Removing invalid distribution: %%d
-    rmdir /s /q "%%d"
-)
 
-REM 检查并解决包冲突
-echo Checking for package conflicts...
-"%python_embeded%" -m pip check 2> conflicts.txt
-if exist conflicts.txt (
-    for /f "tokens=*" %%i in (conflicts.txt) do (
-        echo %%i | findstr /i /r /c:"^ERROR:.*" >nul
-        if !errorlevel! equ 0 (
-            for /f "tokens=2 delims= " %%j in ("%%i") do (
-                echo Uninstalling conflicting package: %%j
-                "%python_embeded%" -m pip uninstall -y %%j
-            )
-        )
-    )
-    del conflicts.txt
-) else (
-    echo No package conflicts found.
+REM 更新 diffusers 库
+echo Updating diffusers library...
+"%python_embeded%" -m pip install -U diffusers
+if errorlevel 1 (
+    echo Failed to update diffusers.
+    goto :end
 )
 
 REM 安装所有 requirements.txt 文件中的依赖项
