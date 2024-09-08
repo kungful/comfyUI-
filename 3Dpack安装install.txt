@@ -5,7 +5,7 @@
 
 然后需要visuals video 2019的cl.exe目录加入到系统环境变量，用voidtools工具https://www.voidtools.com/zh-cn/搜就好删掉目录就能全局电脑文件搜索了
 
-然后是把ninja.exe的目录添加到系统环境变量，把comfyui的python环境的ninja.exe目录加进去就行，加带有python图标那个，没图标的我也加了（这个的排序我是第一靠前），保险起见。按照上面的cl.exe搜出ninja.exe就好。
+然后是把ninja.exe的目录添加到系统环境变量，把comfyui的python环境的ninja.exe目录加进去就行，按照上面的cl.exe搜出ninja.exe就好。现在终端运行这个ninja，如果出现：ninja: error: loading 'build.ninja': 绯荤粺鎵句笉鍒版寚瀹氱殑鏂囦欢銆?；这个输出就是调用正确了，在python的\comfyUI\python_embeded\Lib\site-packages\ninja\data\bin\ninja.exe
 
 python环境需要安装3Dpack的轮子，很简单pip install就行，插件下载到comfyui插件目录解压就好了
 
