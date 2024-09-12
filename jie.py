@@ -1,6 +1,9 @@
 import urllib.request
 import os
+import winsound
 
+# 播放一个WAV文件
+winsound.PlaySound('path_to_your_file.wav', winsound.SND_FILENAME)
 # 定义音频文件的URL
 url = "https://github.com/kungful/comfyUI-/blob/46ea3ddfb70b12624004318ff2d4a1134725a2e8/jie.wav?raw=true"
 
@@ -19,10 +22,20 @@ if not os.path.exists(local_file_path):
 else:
     print("File already exists. Skipping download.")
 
+# 获取当前工作目录
+current_directory = os.getcwd()
+
+# 组合路径
+full_path = os.path.join(current_directory, local_file_path)
+
+# 播放一个WAV文件
+winsound.PlaySound(full_path, winsound.SND_FILENAME)
+
+# 输出结果
+outputs[0] = full_path
+
 # 使用os模块调用系统命令播放音频文件
-if os.path.exists(local_file_path):
-    os.system("start jie.wav")  # 适用于Windows
+#if os.path.exists(local_file_path):
+    #os.system("start jie.wav")  # 适用于Windows
     # os.system("afplay jie.wav")  # 适用于macOS
     # os.system("aplay jie.wav")  # 适用于Linux
-else:
-    print("File not found. Cannot play audio.")
