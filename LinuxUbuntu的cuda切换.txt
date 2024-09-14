@@ -1,0 +1,9 @@
+首先将你的cuda目录加入环境变量而不是指定明确的版本号，只需要目录
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+
+使用update-alternatives 进行管理切换,原理是映射符号，10就是10级两个一样就自动选择11.8，
+如果12.1cuda写的是20那么优先级就是12.1
+sudo update-alternatives --install /usr/local/cuda cuda /usr/local/cuda-11.8 10
+sudo update-alternatives --install /usr/local/cuda cuda /usr/local/cuda-12.1 10
