@@ -1,0 +1,2 @@
+为了使用你制作的轮子，你需要将文件夹复制_Wheels_win_py{python_version}_cu{cuda_version}到{Your ComfyUI Root Folder Path}\ComfyUI\custom_nodes\ComfyUI-3D-Pack\_Pre_Builds\_Build_WheelsComfy3D，然后重新安装。 例如
+，_Wheels_win_py311_cu121C:\Users\reall\Softwares\ComfyUI_windows_portable\ComfyUI\custom_nodes\ComfyUI-3D-Pack\_Pre_Builds\_Build_Wheels
