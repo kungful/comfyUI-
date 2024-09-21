@@ -1,0 +1,57 @@
+#最直接的方法就是用官方的预构建文件
+#安装过程出现什么报错就装什么，缺什么装什么，如果pip检索不到，就再装一次与构建文件whl。
+#sudo apt-get install libegl1-mesa-dev
+#pip install apex
+#pip install nvdiffras
+#pip install torch_scatter
+#pip install tensorrt
+---------------------------------------------------------------------------------------------------------------------------
+#onnxruntime-gpu安装原官网链接如下：
+#https://developer.nvidia.com/cudnn-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_network
+#https://onnxruntime.ai/docs/install/
+
+#安装完成后onnxruntime会掉，记得重装一下，cuda12.1命令如下
+#pip install onnxruntime-gpu --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
+#还有cuDNN要安装才能被cuda12.1调用，命令如下
+#wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+#sudo dpkg -i cuda-keyring_1.1-1_all.deb
+#sudo apt-get update
+#sudo apt-get -y install cudnn
+-------------------------------------------------------------------------------------------------------------------------------
+
+#当你使用screen时候（保留后台显示），如果你的系统安装了两个cuda记得让screen指定环境变量到cuda版本目录代码如下：
+
+#!/bin/bash
+
+# 检查并关闭已有的 comfyui 会话
+screen -ls | grep comfyui | cut -d. -f1 | awk '{print $1}' | xargs -I {} screen -S {} -X quit
+
+# 指定 CUDA 版本路径
+CUDA_VERSION="12.1"  # 请根据你的 CUDA 版本修改此值
+CUDA_HOME="/usr/local/cuda-$CUDA_VERSION"
+
+# 检查 CUDA 路径是否存在
+if [ -d "$CUDA_HOME" ]; then
+    echo "CUDA 路径 $CUDA_HOME 存在。"
+else
+    echo "CUDA 路径 $CUDA_HOME 不存在，请检查 CUDA 安装路径。"
+    exit 1
+fi
+
+# 指定端口
+PORT="80"  # 请根据你的需求修改此值
+
+# 创建一个新的 screen 会话
+screen -dmS comfyui
+
+# 在 screen 会话中运行脚本
+screen -S comfyui -X stuff "export CUDA_HOME=$CUDA_HOME\n"
+screen -S comfyui -X stuff "cd /root/ComfyUI/\n"
+screen -S comfyui -X stuff "python main.py --port $PORT\n"
+
+#显示运行代码
+screen -rd comfyui 
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+#Linux的书写格式记得格式化一下脚本命令如下：
+#dos2unix  main.sh   
