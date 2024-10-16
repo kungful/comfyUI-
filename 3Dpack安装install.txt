@@ -38,4 +38,4 @@ python环境需要安装3Dpack的轮子，很简单pip install就行，插件下
 笔记更新2024/9/16
 关于Windows移植3Dpack，整合包轮子装好后，一直给其他电脑的前提是那天电脑需要：显卡驱动，cuda12.1，git，visual studio2022或者2019勾选C++安装就行
 comfyui正常启动后显示3dpack如果导入失败，提示ninja之类的，这时候需要添加ninja.exe到系统环境变量。这时候启动就能导入成功了
-或许可以写一个脚本添加visual studio的cl.exe和ninja.exe到环境变量的脚本，干
+或许可以写一个脚本添加visual studio的cl.exe和ninja.exe到环境变量的脚本
