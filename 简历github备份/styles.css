@@ -1,0 +1,124 @@
+/* 简单的CSS重置 */
+* {
+    margin: 0; /* 外边距为0 */
+    padding: 0; /* 内边距为0 */
+    box-sizing: border-box; /* 盒子模型为边框盒模型 */
+}        
+body {
+    font-family: Arial, sans-serif; /* 设置字体为Arial或无衬线字体 */
+    background-color: #000000; /* 背景颜色为黑色 */
+    
+
+}
+
+/* 整个容器框 */
+.container {
+    width: 80%; /* 宽度为80% */
+    margin: 20px auto; /* 上下外边距为20px，左右外边距自动居中 */
+    display: grid; /* 使用网格布局 */
+    grid-template-columns: 290px 1fr; /* 左侧列宽度为260px，右侧列自适应宽度 */
+    gap: 20px; /* 列之间的间距为20px */
+    background: #2e1839; /* 背景颜色为深紫色 */
+    padding: 20px; /* 内边距为20px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.sidebar img {
+    width: 100px; /* 设置图片宽度为100像素 */
+    height: 100px; /* 设置图片高度为100像素 */
+    border-radius: 50%; /* 将图片设置为圆形 */
+    margin-top: 60px; /* 设置图片顶部外边距为10像素 */
+    margin-right: 20px; /* 设置图片右侧外边距为20像素 */
+    margin-bottom: 30px; /* 设置图片底部外边距为30像素 */
+    margin-left: 80px; /* 设置图片左侧外边距为40像素 */
+    transform: scale(2); /* 将图片放大1.5倍 */
+}
+
+/* 左侧边栏文字 */
+.sidebar {   
+    background-color: #d48383; /* 背景颜色为浅红色 */
+    padding: 10px; /* 内边距为10px */
+    border-radius: 5px; /* 圆角半径为5px */
+    
+}
+
+/* 左侧边栏标题 */
+.sidebar h2 {   
+    background-color: #ff0000; /* 背景颜色为浅红色 */
+    color: #ffffff; /* 文字颜色为 色 */
+    border-radius: 20px; /* 圆角半径为5px */
+    border-bottom: 2px solid #4800fd; /* 底部边框为2px的蓝色实线 */
+    padding-bottom: 10px; /* 底部内边距为10px */
+    margin-bottom: 10px; /* 底部外边距为10px */
+    
+}
+
+/* 联系信息 */
+.sidebar hua {   
+    margin-bottom: 20px; /* 底部外边距为20px */
+    color: #ffffff; /* 文字颜色为白色 */
+    margin-left: 40px; /* 左外边距为-40px，用于调整缩进 */            
+}        
+
+/* 章节 */
+.section {
+    margin-bottom: 20px; /* 底部外边距为20px */
+}
+
+
+
+
+
+
+
+
+/* 主要内容区域 */
+.main-content h1{
+    color: #ffffff; /* 文字颜色为白色 */
+    text-align: center; /* 文字居中对齐 */
+    color: #ffffff; /* 文字颜色为白色 */
+}
+
+
+/* 无序列表 */
+.main-content ul {
+    margin-left: 20px; /* 左外边距为20px */
+    color: #fff; /* 文字颜色为白色 */
+}      
+
+
+
+/* 章节段落 */
+.section p {
+    margin: 5px 0; /* 上下外边距为5px，左右外边距为0 */
+    color: #fff; /* 文字颜色为白色 */
+} 
+
+/* 技能列表 */
+.skills ul {
+    list-style-type: none; /* 列表样式为无 */
+    padding: 0; /* 内边距为0 */
+}
+
+/* 技能列表项 */
+.skills li {
+    display: inline-block; /* 显示为内联块元素 */
+    margin: 5px; /* 上下左右外边距为5px */
+    padding: 5px 10px; /* 上下内边距为5px，左右内边距为10px */
+    background: #3f0fda; /* 背景颜色为深蓝色 */
+    color: #ffffff; /* 文字颜色为白色 */
+    border-radius: 5px; /* 圆角半径为5px */
+}
+
+/* 章节标题2 */
+.section h2 {
+    background-color: #d231ad; /* 背景颜色为深紫色 */
+    padding: 4px 4px; /* 上下左右内边距为4px */
+    display: inline-block; /* 显示为内联块元素 */
+    border-radius: 15px; /* 圆角半径为5px */
+
+    color: #000000; /* 文字颜色为白色 */
+    border-bottom: 2px solid #4800fd; /* 底部边框为2px的蓝色实线 */
+    padding-bottom: 10px; /* 底部内边距为10px */
+    margin-bottom: 10px; /* 底部外边距为10px */
+}
